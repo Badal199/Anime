@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced RGB Particle Animation</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, rgba(20,20,50,1) 0%, rgba(0,0,0,1) 100%);
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            animation: float 15s infinite ease-in-out, color-change 6s infinite alternate;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0) scale(1);
+            }
+            50% {
+                transform: translateY(-100vh) translateX(50vw) scale(1.5);
+            }
+            100% {
+                transform: translateY(100vh) translateX(-50vw) scale(0.7);
+            }
+        }
+
+        @keyframes color-change {
+            0% {
+                background-color: rgb(255, 0, 127);
+            }
+            33% {
+                background-color: rgb(0, 255, 255);
+            }
+            66% {
+                background-color: rgb(255, 255, 0);
+            }
+            100% {
+                background-color: rgb(127, 0, 255);
+            }
+        }
+
+        /* Creating different patterns and motions */
+        .particle:nth-child(1) {
+            width: 30px;
+            height: 30px;
+            left: 10%;
+            animation-duration: 10s;
+        }
+
+        .particle:nth-child(2) {
+            width: 20px;
+            height: 20px;
+            left: 30%;
+            animation-duration: 14s;
+        }
+
+        .particle:nth-child(3) {
+            width: 50px;
+            height: 50px;
+            left: 50%;
+            animation-duration: 12s;
+        }
+
+        .particle:nth-child(4) {
+            width: 40px;
+            height: 40px;
+            left: 70%;
+            animation-duration: 8s;
+        }
+
+        .particle:nth-child(5) {
+            width: 25px;
+            height: 25px;
+            left: 90%;
+            animation-duration: 11s;
+        }
+
+        /* Adding more particle customization */
+        .particle:nth-child(6) {
+            width: 35px;
+            height: 35px;
+            left: 15%;
+            animation-duration: 16s;
+        }
+
+        .particle:nth-child(7) {
+            width: 45px;
+            height: 45px;
+            left: 85%;
+            animation-duration: 9s;
+        }
+
+        .particle:nth-child(8) {
+            width: 60px;
+            height: 60px;
+            left: 65%;
+            animation-duration: 13s;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Generating particles -->
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+
+</body>
+</html>
